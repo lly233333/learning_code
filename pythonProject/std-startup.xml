@@ -1,0 +1,10 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!--    标签的固定写法-->
+    <category>
+        <pattern>LOAD AIML B</pattern>
+<!--            和respond代码对应必须大写-->
+        <template>
+            <learn>basic_chat.aiml</learn>
+        </template>
+    </category>
+</aiml>

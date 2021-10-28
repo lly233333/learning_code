@@ -1,0 +1,90 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!--    标签的固定写法-->
+    <category>
+        <pattern>hello</pattern>
+<!--            和respond代码对应必须大写-->
+        <template>hello world</template>
+    </category>
+<!--    关键字匹配-->
+    <category>
+        <pattern>* you</pattern>
+<!--            和respond代码对应必须大写-->
+        <template>i m fine thanks</template>
+    </category>
+<!--   获取模糊匹配位置的关键词-->
+    <category>
+        <pattern>一个*是*吗</pattern>
+        <template>第一个参数是<star index="1"/>,第二个参数是<star index="2"/></template>
+    </category>
+<!--    随即标签-->
+    <category>
+        <pattern>*想*</pattern>
+        <template>
+            <random>
+                <li>我也想你了</li>
+                <li>不要脸</li>
+                <li>想啥呢</li>
+                <li>第一个参数是<star index="1"/></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>好想</pattern>
+        <template>
+            <random>
+                <li>我也想你了</li>
+                <li>不要脸</li>
+                <li>想啥呢</li>
+                <li>第一个参数是<star index="1"/></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>好想*</pattern>
+        <template>
+            <srai>
+<!--                必须和上面的模式完全匹配-->
+                好想
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>我是*</pattern>
+        <template>
+            你好啊<set name="username"><star/></set>,很高兴见到你
+        </template>
+    </category>
+    <category>
+        <pattern>晚安</pattern>
+        <template>
+<!--            多轮对话-->
+            美梦啊<get name="username"/><star/>,很高兴见到你
+        </template>
+    </category>
+<!--    that标签-->
+    <category>
+        <pattern>*明星*</pattern>
+        <template>刘德华</template>
+    </category>
+    <category>
+        <pattern>我也是</pattern>
+        <that>刘德华</that>
+        <template>我也喜欢他</template>
+    </category>
+    <category>
+        <pattern>*作业*</pattern>
+        <template>好啊，聊聊<set name="topic">作业</set>吧</template>
+    </category>
+<!--    进入作业主题-->
+    <topic name="作业">
+        <category>
+            <pattern>好难啊</pattern>
+            <template>作业真是难啊</template>
+        </category>
+        <category>
+            <pattern>作业怎么做啊</pattern>
+            <template>你说啥呢，我也不知道</template>
+        </category>
+    </topic>
+</aiml>

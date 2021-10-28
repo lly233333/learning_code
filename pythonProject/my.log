@@ -1,0 +1,8 @@
+2021-10-24 23:56:33,296 - DEBUG - This is a debug log
+2021-10-24 23:56:33,296 - INFO - This is a info log
+2021-10-24 23:56:33,297 - WARNING - This is a warning log
+2021-10-24 23:56:33,297 - ERROR - This is a error log
+2021/10/25 00:01:13 - DEBUG - This is a debug log
+2021/10/25 00:01:13 - INFO - This is a info log
+2021/10/25 00:01:13 - WARNING - This is a warning log
+2021/10/25 00:01:13 - ERROR - This is a error log
